@@ -6,15 +6,10 @@ using RimWorld;
 
 namespace {{cookiecutter.mod_name.replace(' ', '_')}}
 {
-	class Settings : ModSettings
+	public class Settings : ModSettings
 	{
-		//Use Settings.Get().settings to refer to this setting.
-		public bool setting;
-
-		public static Settings Get()
-		{
-			return LoadedModManager.GetMod<{{cookiecutter.mod_name.replace(' ', '_')}}.Mod>().GetSettings<Settings>();
-		}
+		//Use Mod.settings.setting to refer to this setting.
+		public bool setting = true;
 
 		public void DoWindowContents(Rect wrect)
 		{

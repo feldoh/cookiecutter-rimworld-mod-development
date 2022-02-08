@@ -8,7 +8,7 @@
     <OutputPath>.\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <OutputPath>..\{{cookiecutter.mod_name}} - Release\</OutputPath>
+	<OutputPath>..\$(SolutionName) - Release\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
 		<ReleaseFiles Include="About\**;Defs\**;Patches\**;Languages\**;Sounds\**;Textures\**"
@@ -22,9 +22,9 @@
           SkipUnchangedFiles="true" />
     <Copy Condition=" '$(Configuration)' == 'Release' "
 					SourceFiles="@(ReleaseFiles)"
-					DestinationFiles="@(ReleaseFiles->'$(OutputPath)%(RelativeDir)%(RecursiveDir)%(Filename)%(Extension)')"
+					DestinationFiles="@(ReleaseFiles->'$(OutputPath)%(RelativeDir)%(Filename)%(Extension)')"
           SkipUnchangedFiles="true" />
-	</Target>
+  </Target>
   <Target Name="Rebuild" />
   <Target Name="PostBuild" AfterTargets="Build">
     <RemoveDir Directories="obj" />
