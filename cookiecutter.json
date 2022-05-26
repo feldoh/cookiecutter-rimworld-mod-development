@@ -3,9 +3,10 @@
     "mod_name": "Example Mod",
     "author": "MySteamUsername",
     "in_game_description": "A short mod description.",
-    "mod_ver": ["1.0", "1.1","1.2","1.3","1.4","1.5","2.0"],
+    "mod_ver": ["1.3", "1.0","1.1","1.2","1.4","1.5","2.0"],
     "create_empty_definitions": "n",
     "rw64": "y",
+    "dotnet_ver": ["v4.7.2"],
     "harmony": "y",
     "helloWorld": "n",
     "settings": "n",
@@ -18,7 +19,7 @@
         },
         "mod_name": {
             "label": "Mod name",
-            "description": "The name of your mod and the assembly (cannot easily change later)"
+            "description": "The name of your mod and the assembly, spaces will be replaced by underscores where necessary (cannot easily change later)"
         },
         "author": {
             "label": "Author",
@@ -30,7 +31,7 @@
         },
         "mod_ver" : {
             "label": "Mod Version",
-            "description": "The version of Rimworld this mod is for (default:1.0)"
+            "description": "The version of Rimworld this mod is for (default:1.3)"
         },
         "create_empty_definitions": {
             "label": "Create blank XML definition files",
@@ -41,6 +42,10 @@
             "label": "RimWorldWin64.exe ?",
             "description": "Are you using RimWorldWin64.exe or not to develop?",
             "selector": "yesno"
+        },
+        "dotnet_ver": {
+            "label": "DotNet Framework Version",
+            "description": "The version of the DotNet Framework you want to use (default:v4.7.2)"
         },
         "harmony":{
             "label": "Include Harmony library",
