@@ -43,9 +43,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
-  </ItemGroup>
   {%if(cookiecutter.harmony != 'n')%}  <ItemGroup>
     <PackageReference Include="Lib.Harmony" Version="2.*" ExcludeAssets="runtime"/>
   </ItemGroup>
@@ -75,6 +72,9 @@
     <Copy SourceFiles="@(ReleaseFiles)" DestinationFiles="@(ReleaseFiles->'../../../Release/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="false" />
     <Copy SourceFiles="@(ExtraFiles)" DestinationFolder="../../../Release/" SkipUnchangedFiles="false" />
     <ZipDirectory DestinationFile="../../../$(AssemblyName).zip" SourceDirectory="../../../Release" />
+    <ItemGroup>
+      <ReleaseFolder Include="../../../Release/**" />
+    </ItemGroup>
     <RemoveDir Condition="Exists('$(SteamModsPath)')" Directories="$(SteamModsPath)/$(AssemblyName)" ContinueOnError="true"/>
     <Copy Condition="Exists('$(SteamModsPath)')" SourceFiles="@(ReleaseFolder)" DestinationFiles="@(ReleaseFolder->'$(SteamModsPath)/$(AssemblyName)/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
   </Target>

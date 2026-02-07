@@ -1,9 +1,9 @@
 {
-	"dummy":"Okay!",
+	"_dummy":"Okay!",
     "mod_name": "Example Mod",
     "author": "MySteamUsername",
     "in_game_description": "A short mod description.",
-    "mod_ver": ["1.6","1.7","2.0"],
+    "mod_ver": ["1.6","1.7"],
     "create_empty_definitions": "n",
     "rw64": "y",
     "harmony": "y",
@@ -18,7 +18,7 @@
     "continuity": ["Nominee", "None"],
     
     "_visual_studio": {
-        "dummy": {
+        "_dummy": {
             "label": "\"Create To\" should be RimWorld/Mods"
         },
         "mod_name": {
@@ -35,7 +35,7 @@
         },
         "mod_ver" : {
             "label": "Mod Version",
-            "description": "The version of Rimworld this mod is for (default:1.6)",
+            "description": "The version of Rimworld this mod is for",
             "selector": "mod_ver"
         },
         "create_empty_definitions": {
