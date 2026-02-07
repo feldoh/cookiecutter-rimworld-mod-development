@@ -3,6 +3,7 @@
     "mod_name": "Example Mod",
     "author": "MySteamUsername",
     "in_game_description": "A short mod description.",
+    "project_type": ["Full", "XML only"],
     "mod_ver": ["1.6","1.7"],
     "create_empty_definitions": "n",
     "rw64": "y",
@@ -32,6 +33,11 @@
         "in_game_description" : {
             "label": "Mod Description",
             "description": "The description of the mod as it appears in-game (can change later in About.xml)"
+        },
+        "project_type" : {
+            "label": "Project Type",
+            "description": "Full includes C# source, build tooling and IDE support. XML only creates a mod with just Defs and Patches (C#-specific options below are ignored).",
+            "selector": "project_type"
         },
         "mod_ver" : {
             "label": "Mod Version",

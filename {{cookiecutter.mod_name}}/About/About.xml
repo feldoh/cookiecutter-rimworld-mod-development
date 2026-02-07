@@ -8,7 +8,7 @@
     <packageId>{{cookiecutter.author.replace(' ','')}}.{{cookiecutter.mod_name.replace(' ','')}}</packageId>
     <description>{{cookiecutter.in_game_description}}</description>
     <url>https://steamcommunity.com/id/{{cookiecutter.author}}/myworkshopfiles/?appid=294100</url>
-{%if(cookiecutter.harmony != 'n')%}	<modDependencies>
+{%if(cookiecutter.harmony != 'n' and cookiecutter.project_type != 'XML only')%}	<modDependencies>
         <li>
             <packageId>brrainz.harmony</packageId>
             <displayName>Harmony</displayName>
@@ -18,7 +18,7 @@
     </modDependencies>
 {%endif%}
     <loadAfter>
-        {%if(cookiecutter.harmony != 'n')%}<li>brrainz.harmony</li>{%endif%}
+        {%if(cookiecutter.harmony != 'n' and cookiecutter.project_type != 'XML only')%}<li>brrainz.harmony</li>{%endif%}
         <li>Ludeon.RimWorld</li>
         <li>Ludeon.RimWorld.Ideology</li>
         <li>Ludeon.RimWorld.Royalty</li>
