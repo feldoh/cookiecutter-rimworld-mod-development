@@ -20,11 +20,11 @@ A cookiecutter project that builds the basic Rimworld mod development file struc
 - [git](https://git-scm.com/downloads)
 - [python](https://www.python.org/downloads/)
 - [cookiecutter](https://github.com/audreyr/cookiecutter) (or `pip install cookiecutter`)
+  - Recommend cookiecutter 2.0+ (`pip install cookiecutter>=2`). On older versions (1.x), you will be prompted for `_visual_studio` — just type `{}` and press Enter.
 
 ##### Usage (inside Rimworld/Mods folder)
 1. `cookiecutter https://github.com/feldoh/cookiecutter-rimworld-mod-development`
 2. `[Answer the prompts]`
-   1. Note that when it asks you `_visual_studio` you must respond `{}`
 3. Open the folder you just created and double-click the `ModName.sln` file
 4. In the Solution Explorer view on the right, right click `RimWorldWin` and click `Set as Startup Project`
     
