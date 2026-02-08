@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Excluded>
+    <exclude>.git</exclude>
+    <exclude>.gitignore</exclude>
+    <exclude>.gitattributes</exclude>
+    <exclude>.editorconfig</exclude>
+    <exclude>.vs</exclude>
+    <exclude>Assets</exclude>
+    <exclude>Release</exclude>
+    <exclude>release.bat</exclude>
+{%if(cookiecutter.project_type != 'XML only')%}    <exclude>{{cookiecutter.mod_ver}}/Source</exclude>
+{%endif%}    <exclude>{{cookiecutter.mod_name.replace(' ', '_')}}.zip</exclude>
+  </Excluded>
+</Configuration>

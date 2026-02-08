@@ -14,6 +14,7 @@
     "rider": "y",
     "compat": "n",
     "defOf": "y",
+    "publisherPlus": "n",
     "copyToSteam": "y",
     "license": ["MIT", "CC-BY", "Other", "None"],
     "continuity": ["Nominee", "None"],
@@ -87,6 +88,11 @@
         "defOf":{
             "label": "Include a DefOf class",
             "description": "Creates a DefOf class for your mod, so you can use DefOfs in your code, like MyDefOf.Something.",
+            "selector": "yesno"
+        },
+        "publisherPlus":{
+            "label": "Include PublisherPlus config",
+            "description": "Creates a _PublisherPlus.xml with sensible exclusions for Steam Workshop uploads via PublisherPlus.",
             "selector": "yesno"
         },
         "copyToSteam":{
